@@ -1,0 +1,25 @@
+center{
+     padding-top: 12px;
+     padding-bottom: 8px;
+   
+}
+a{
+     text-decoration: none;
+     color: aliceblue;
+     font-size:x-large;
+}
+a:hover{
+     color:rgb(247, 8, 8)
+}
+h2{
+     color:rgb(166, 255, 0);
+}
+h2:hover{
+     color:aliceblue
+}
+h1{
+     color:rgb(166, 255, 0);
+}
+h1:hover{
+     color:aliceblue
+}

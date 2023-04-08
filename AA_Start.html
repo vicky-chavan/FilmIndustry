@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          body{
+               background-image: url(./images/Images/first.jpg);
+          }
+          table{
+               color: aliceblue;
+               border-style:solid;
+               border-width: 10px;
+               margin-top: 200px;
+              
+          }
+          form{
+               margin-top: 50px;
+          }
+     </style>
+     <script>
+          function verify()
+          {
+               var a=document.form.Email.value;
+               var b=document.form.password.value;
+               var count3=0;
+               var count4=0;
+               var count5=0;
+               var count6=0;
+               var count7=0;
+               var count8=0;
+               a=a.toLowerCase();
+
+               var count1=0;
+               var count2=0;
+               if(a.charAt(0)>="a" && a.charAt(0)<="z")
+               {
+                    count1++;
+               }
+
+               for(var i=0;i<a.length;i++)
+               {
+                    if(a.charAt(i)=="@" && a.charAt(i+1)=="g")
+                    {
+                         count2++;
+                    }
+               }
+               
+               for(var i=0;i<b.length;i++)
+               {
+                    if(b.charAt(i)>="A"&& b.charAt(i)<="Z")
+                    {
+                        count3++;
+                    }
+                    else if(b.charAt(i)>="a" && b.charAt(i)<="z")
+                    {
+                         count4++;
+                    }
+                    else if(b.charAt(i)>="0" && b.charAt(i)<="9")
+                    {
+                         count5++;
+                    }
+                    else{
+                         count6++;
+                    }
+               }
+
+
+               if(a.charAt(a.length-1)=="m" && count1==1 && count2==1)
+               {
+                    count7++;
+               }
+               else{
+                    document.write("Invalid Email");
+               }
+               if(count3>=1 && count4>=1 && count5>=1 && count6>=1)
+               {
+                    count8++;
+               }
+               else{
+                    document.write("Invalid Credentials");
+               }
+               if(count7==1 && count8==1)
+               {
+                    window.open("")
+               }
+          }
+     </script>
+</head>
+<body>
+     <table align="center">
+          <tr>
+               <td>
+                    <form name="form">
+                         <label>Enter Email</label>
+                         <input type="password" name="Email" placeholder="Enter Email" >
+                         <br><br>
+                         <label>Enter Password</label>
+                         <input type="password" name="password"placeholder="Enter Password">
+                         <br><br>
+                         <input type="submit" value="Enter" onclick="return verify()">
+                    </form>
+               </td>
+          </tr>
+     </table>
+</body>
+</html>
